@@ -26,6 +26,10 @@ app.get('/add', function(req,res){
     res.render('addProduct');
 })
 
+app.get('/login',function(req,res){
+    res.render('login');
+})
+
 app.post('/doAddProduct', async function(req,res){
     let client= await MongoClient.connect(url);
     let dbo = client.db("Ass2");
